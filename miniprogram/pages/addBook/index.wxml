@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="title-box">
+        <van-field value="{{ title }}" placeholder="请输入书籍名称" bind:change="changeTitle" />
+    </view>
+    <view class="content-box">
+        <van-field value="{{ content }}" type="textarea" show-word-limit maxlength="500" placeholder="请输入500字以内评论" bind:change="changeContent" />
+    </view>
+    <view class="submit-btn-box">
+        <van-button disabled="{{ disabled }}" round type="info" color="#C7143D" block bindtap="submitBook">
+            提交
+        </van-button>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<!-- index.wxml -->
+<view class="container">
+    <scroll-view scroll-y="true" enable-flex="true" bindscrolltolower="loadMore" class="scroll-view-box">
+        <view wx:for="{{bookList}}" wx:for-index="index" wx:key="index" wx:for-item="item" class="book-item">
+            <view class="book-item-left">
+                <view class="title">{{item.title}}</view>
+                <view class="content">{{item.content}}</view>
+                <view class="user-box">
+                    <image mode="aspectFill" src="{{item.avatarUrl}}" />
+                    <view>{{item.nickName}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="load-more-box">
+            <block wx:if="{{loadMoreState != 2}}">
+                <van-loading type="spinner" size="40rpx" color="#848484" />
+                <view class="load-text load-text-padding">加载中...</view>
+            </block>
+            <view class="load-text" wx:else>没有更多数据了...</view>
+        </view>
+    </scroll-view>
+    <button class="add-btn" hover-class="add-btn-hover" bindtap="goAddBook">
+        <van-icon name="plus" color="#fff" size="50rpx" />
+    </button>
+</view>

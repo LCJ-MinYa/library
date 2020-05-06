@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="head-wrap">
+        <button class="login-btn" open-type="getUserInfo" bindtap="getUserInfoFun" data-type="wx">
+            <view class="header-img-box">
+                <image mode="aspectFill" src="{{userInfo.avatarUrl || '../../../images/mine/avatar.png'}}" />
+            </view>
+            <view class="header-name">{{userInfo.nickName || '请登录'}}</view>
+        </button>
+    </view>
+    <view class="column-cross-flex-start">
+        <!-- <van-cell icon="other-pay" title="意见反馈" is-link /> -->
+        <van-cell icon="info-o" bindtap="goAboutUs" title="关于我们" is-link />
+    </view>
+</view>

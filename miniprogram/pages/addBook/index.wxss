@@ -1,0 +1,24 @@
+.container {
+    padding: 0 20rpx;
+}
+
+.title-box {
+    width: 100%;
+}
+
+.content-box {
+    width: 100%;
+}
+
+textarea {
+    height: 500rpx !important;
+}
+
+.submit-btn-box {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20rpx 10%;
+}

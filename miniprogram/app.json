@@ -1,0 +1,41 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/mine/index/index",
+        "pages/mine/aboutUs/index",
+        "pages/addBook/index"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#C7143D",
+        "navigationBarTitleText": "佚名藏书",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#666",
+        "selectedColor": "#C7143D",
+        "list": [
+            {
+                "iconPath": "./images/index_tab_icon.png",
+                "selectedIconPath": "./images/index_tab_active_icon.png",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "iconPath": "./images/mine_tab_icon.png",
+                "selectedIconPath": "./images/mine_tab_active_icon.png",
+                "pagePath": "pages/mine/index/index",
+                "text": "我的"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-loading": "@vant/weapp/loading/index"
+    },
+    "sitemapLocation": "sitemap.json"
+}

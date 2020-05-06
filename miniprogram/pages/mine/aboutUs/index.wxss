@@ -1,0 +1,22 @@
+.container {
+    padding: 20rpx;
+}
+
+.container>view.title {
+    text-align: center;
+    font-size: 36rpx;
+    color: #666;
+    padding: 20rpx 0 40rpx;
+}
+
+.container>view.content>view {
+    font-size: 28rpx;
+    color: #666;
+    text-indent: 40rpx;
+    line-height: 180%;
+    margin-bottom: 40rpx;
+}
+
+.container>view.content>view:last-child {
+    margin-bottom: 0;
+}
