@@ -22,7 +22,7 @@
             <view class="load-text" wx:else>没有更多数据了...</view>
         </view>
     </scroll-view>
-    <button class="add-btn" hover-class="add-btn-hover" bindtap="goAddBook">
+    <!-- <button class="add-btn" hover-class="add-btn-hover" bindtap="goAddBook">
         <van-icon name="plus" color="#fff" size="50rpx" />
-    </button>
+    </button> -->
 </view>
