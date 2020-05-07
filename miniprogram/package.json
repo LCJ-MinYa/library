@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "@vant/weapp": "^1.2.2"
+    "@vant/weapp": "^1.2.2",
+    "moment": "^2.25.3"
   },
   "devDependencies": {},
   "scripts": {

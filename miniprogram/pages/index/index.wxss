@@ -63,7 +63,7 @@ page {
     color: #333;
     font-weight: bold;
     line-height: 1;
-    padding-bottom: 20rpx;
+    padding: 30rpx 0;
 }
 
 .book-item-left>.content {
@@ -74,6 +74,19 @@ page {
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+.other-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.other-box>view.time {
+    width: 50%;
+    font-size: 24rpx;
+    color: #999;
 }
 
 .user-box {

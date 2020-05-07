@@ -58,6 +58,9 @@ Page({
             success: res => {
                 app.toast('添加书评成功~');
                 setTimeout(() => {
+                    let pages = getCurrentPages();
+                    let indexPage = pages[pages.length - 2];
+                    indexPage.reloadRequest();
                     wx.navigateBack();
                 }, 1000);
             },

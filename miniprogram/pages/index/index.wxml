@@ -5,9 +5,12 @@
             <view class="book-item-left">
                 <view class="title">{{item.title}}</view>
                 <view class="content">{{item.content}}</view>
-                <view class="user-box">
-                    <image mode="aspectFill" src="{{item.avatarUrl}}" />
-                    <view>{{item.nickName}}</view>
+                <view class="other-box">
+                    <view class="time">{{item.createTime}}</view>
+                    <view class="user-box">
+                        <image mode="aspectFill" src="{{item.avatarUrl}}" />
+                        <view>{{item.nickName}}</view>
+                    </view>
                 </view>
             </view>
         </view>

@@ -1,5 +1,6 @@
 //index.js
 const app = getApp()
+const moment = require('moment');
 
 Page({
     data: {
@@ -8,6 +9,16 @@ Page({
         bookList: [],
         pageIndex: 1,
         pageSize: 10
+    },
+
+    onLoad() {
+        this.getBookList();
+        console.log(moment().format('YYYY-MM-DD'));
+    },
+
+    reloadRequest() {
+        this.data.pageIndex = 1;
+        this.getBookList();
     },
 
     goAddBook() {
@@ -34,7 +45,10 @@ Page({
                 .then(result => {
                     wx.hideLoading();
 
-                    console.log(result);
+                    for (let i = 0; i < result.data.length; i++) {
+                        result.data[i].createTime = moment(result.data[i].createTime).format('YYYY-MM-DD HH:mm:ss');
+                    }
+
                     if (this.data.pageIndex == 1) {
                         this.setData({
                             bookList: result.data
@@ -44,8 +58,8 @@ Page({
                             bookList: this.data.bookList.concat(result.data)
                         })
                     }
-                    this.data.pageIndex++;
                     this.dealLoadMore(count >= this.data.pageIndex * this.data.pageSize);
+                    this.data.pageIndex++;
                 });
         })
     },
@@ -73,10 +87,5 @@ Page({
                 loadMoreState: 2
             })
         }
-    },
-
-    onShow() {
-        this.data.pageIndex = 1;
-        this.getBookList();
     }
 })

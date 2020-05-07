@@ -9,6 +9,10 @@
     padding: 20rpx 0 40rpx;
 }
 
+.container>view.content {
+    width: 100%;
+}
+
 .container>view.content>view {
     font-size: 28rpx;
     color: #666;
