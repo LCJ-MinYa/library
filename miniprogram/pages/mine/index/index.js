@@ -19,7 +19,7 @@ Page({
     },
 
     getUserInfoFun() {
-        if (this.userInfo) {
+        if (this.data.userInfo) {
             return;
         }
         wx.getUserInfo({
